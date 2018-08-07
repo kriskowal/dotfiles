@@ -8,7 +8,7 @@ alias files='cut -d: -f1 | uniq'
 alias d='docker'
 alias dc='docker-compose'
 alias dm='docker-machine'
-alias ls='ls -ahF'
+alias ll='ls -ahF'
 alias :e="nvim"
 alias :v="tmux split-window -h nvim"
 alias :s="tmux split-window -v nvim"
@@ -115,7 +115,7 @@ z() {
 export GO15VENDOREXPERIMENT=1
 
 # added by travis gem
-[ -f /Users/kris/.travis/travis.sh ] && source /Users/kris/.travis/travis.sh
+[ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
 
 # d=$(test -f /tmp/wat.txt && cat /tmp/wat.txt || echo 0.1)
 # (sleep "$d" && echo "$d + 0.1") | bc > /tmp/wat.txt

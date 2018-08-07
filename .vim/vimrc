@@ -63,6 +63,7 @@ Plugin 'othree/html5.vim'
 Plugin 'solarnz/thrift.vim'
 Plugin 'mxw/vim-jsx'
 " Plugin 'zchee/deoplete-go'
+Plugin 'leafgarland/typescript-vim'
 
 " Color schemes
 Plugin 'baycomb'
@@ -110,6 +111,7 @@ filetype indent on
 au FileType make set noexpandtab
 " Python, follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+au FileType typescript set makeprg=tsc
 
 " Searching
 set incsearch
@@ -193,6 +195,16 @@ au FileType go nmap <leader>db <Plug>(go-doc-browser)
 au FileType go nmap <Leader>gd <Plug>(go-def)
 au FileType go nmap <leader>gs <Plug>(go-def-split)
 au FileType go nmap <leader>gv <Plug>(go-def-vertical)
+
+au FileType go nmap <leader>gDs <Plug>(go-debug-stop)
+au FileType go nmap <leader>gDb <Plug>(go-debug-breakpoint)
+au FileType go nmap <leader>gDc <Plug>(go-debug-continue)
+au FileType go nmap <leader>gD<Space> <Plug>(go-debug-continue)
+au FileType go nmap <leader>gDn <Plug>(go-debug-next)
+au FileType go nmap <leader>gD<CR> <Plug>(go-debug-next)
+au FileType go nmap <leader>gDs <Plug>(go-debug-step)
+au FileType go nmap <leader>gD<Esc> <Plug>(go-debug-stepout)
+au FileType go nmap <leader>gDp <Plug>(go-debug-print)
 
 au FileType go nmap <leader>s <Plug>(go-implements)
 au FileType go nmap <leader>i <Plug>(go-info)

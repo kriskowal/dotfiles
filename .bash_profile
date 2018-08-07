@@ -13,3 +13,5 @@ if [ -f "$HOME"/.bash_profile.local ]; then
     # shellcheck disable=SC1090
     source "$HOME"/.bash_profile.local
 fi
+
+export PATH="$HOME/.cargo/bin:$PATH"

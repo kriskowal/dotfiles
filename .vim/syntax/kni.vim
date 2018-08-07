@@ -1,12 +1,16 @@
+" Vim syntax file
+" Language: Kni
+" Maintainer: Kris Kowal <kris@cixar.com> https://github.com/kriskowal/kni
+
 syn match kniComment / #.*/
 syn match kniComment2 /^#.*/
 syn match kniTodo /\v(TODO|FIXME|XXX)/ containedin=kniComment,kniComment2
 syn match kniSymbol /[{}\[\]|/\\]/
 syn match kniBullet /^\s*[!\-\+\*]\s/
 syn match kniPrompt /^\s*>/
-syn match kniJump /\->\s*[a-zA-Z\.]*/
+syn match kniJump /\->\s*[a-zA-Z\.][a-zA-Z0-9\.]*/
 syn match kniReturn /<\-/
-syn match kniLabel /@[a-zA-Z\.]*/
+syn match kniLabel /@[a-zA-Z\.][a-zA-Z0-9\.]*/
 syn match kniExpression /[()]/
 
 hi def link kniComment Comment

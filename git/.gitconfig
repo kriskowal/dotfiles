@@ -28,6 +28,7 @@
     lgtm = log --graph --pretty=brief --date=relative origin/master^..HEAD
     lgto = log --graph --pretty=brief --date=relative origin/dev^..HEAD
     lo = log --pretty=brief --date=relative --no-merges
+    poke = commit -m 'Poke continuous integration' --allow-empty
     pr = pull-request
     r = reset
     ra = rebase --abort
@@ -86,6 +87,7 @@
 [rebase]
     stat = true
 	autosquash = true
+    autostash = true
     ; instructionFormat = %s [%an]%d
     ; instructionFormat = [%ad] <%an> %s %d
     instructionFormat = <%an> %s%d
