@@ -46,22 +46,17 @@ export EDITOR=vim
 export PAGER=less
 export LESS="-SMRci"
 
-export GOPATH="${HOME}"/gocode
 export CPLUS_INCLUDE_PATH="/usr/local/include:${CPLUS_INCLUDE_PATH}"
 export PATH=\
 /sbin:\
 /bin:\
-${GOPATH}/bin:\
 /usr/local/sbin:\
 /usr/local/bin:\
 /usr/sbin:\
 /usr/bin:\
 /Developer/usr/bin:\
-${HOME}/bin:\
-${HOME}/FlameGraph:\
-${HOME}/.yarn/bin:\
 /Applications/Inkscape.app/Contents/Resources/bin:\
-/usr/local/opt/go/libexec/bin
+${HOME}/bin
 
 # git bash completion
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
@@ -84,6 +79,11 @@ fi
 export NVM_DIR="$HOME/.nvm"
 if [ -s "$NVM_DIR/nvm.sh" ]; then
     source "$NVM_DIR/nvm.sh"
+fi
+
+# direnv
+if which direnv > /dev/null; then
+    eval "$(direnv hook bash)"
 fi
 
 # local overrides
@@ -112,10 +112,5 @@ z() {
     fasd_cd -d "$@"
 }
 
-export GO15VENDOREXPERIMENT=1
-
 # added by travis gem
 [ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
-
-# d=$(test -f /tmp/wat.txt && cat /tmp/wat.txt || echo 0.1)
-# (sleep "$d" && echo "$d + 0.1") | bc > /tmp/wat.txt
