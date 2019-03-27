@@ -24,10 +24,10 @@
     ds = diff --stat
     fe = fetch
     fo = fetch origin
-    lg = log --graph --pretty=brief --date=relative
-    lgtm = log --graph --pretty=brief --date=relative origin/master^..HEAD
-    lgto = log --graph --pretty=brief --date=relative origin/dev^..HEAD
-    lo = log --pretty=brief --date=relative --no-merges
+    lg = log --graph --pretty=brief
+    lgtm = log --graph --pretty=brief origin/master^..HEAD
+    lgto = log --graph --pretty=brief origin/dev^..HEAD
+    lo = log --pretty=brief --no-merges
     poke = commit -m 'Poke continuous integration' --allow-empty
     pr = pull-request
     r = reset
