@@ -66,6 +66,7 @@ Plugin 'solarnz/thrift.vim'
 " Plugin 'mxw/vim-jsx'
 " Plugin 'zchee/deoplete-go'
 " Plugin 'leafgarland/typescript-vim'
+Plugin 'jcorbin/vim-lobster'
 
 " Color schemes
 Plugin 'baycomb'
