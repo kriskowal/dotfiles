@@ -13,6 +13,12 @@ alias :e="nvim"
 alias :v="tmux split-window -h nvim"
 alias :s="tmux split-window -v nvim"
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
 tnjq() {
     jq -r .msg | jq -r '.log|rtrimstr("\n")' | jq "$@"
 }
