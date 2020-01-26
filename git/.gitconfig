@@ -10,12 +10,15 @@
     ci = commit
     cia = commit --amend
     ciam = commit --amend -m
+    cian = commit --amend --no-edit
     cif = commit --amend -C HEAD
     cim = commit -m
     cinit = commit -m 'Ex nihlio' --allow-empty
     co = checkout
     cod = checkout dev
     com = checkout master
+    cood = checkout origin/dev
+    coom = checkout origin/master
     cp = cherry-pick
     d = diff
     dc = diff --cached
@@ -35,9 +38,9 @@
     rb = rebase
     rc = rebase --continue
     rh = reset --hard
-    ri = rebase -i
-    riod = rebase -i origin/dev
-    riom = rebase -i origin/master
+    ri = rebase -f -i
+    riod = rebase -f -i origin/dev
+    riom = rebase -f -i origin/master
     rl = reflog --pretty=briefreflog
     rod = rebase origin/dev
     rom = rebase origin/master
