@@ -27,6 +27,7 @@
     ds = diff --stat
     fe = fetch
     fo = fetch origin
+    initt = !git init && echo "ref: refs/heads/trunk" > .git/HEAD
     lg = log --graph --pretty=brief
     lgtm = log --graph --pretty=brief origin/master^..HEAD
     lgto = log --graph --pretty=brief origin/dev^..HEAD
@@ -41,9 +42,11 @@
     ri = rebase -f -i
     riod = rebase -f -i origin/dev
     riom = rebase -f -i origin/master
+    riot = rebase -f -i origin/trunk
     rl = reflog --pretty=briefreflog
     rod = rebase origin/dev
     rom = rebase origin/master
+    rot = rebase origin/trunk
     rp = reset -p
     rs = rebase --skip
     s = stash
