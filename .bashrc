@@ -52,6 +52,8 @@ export EDITOR=vim
 export PAGER=less
 export LESS="-SMRci"
 
+export MODDABLE=$HOME/moddable
+
 export CPLUS_INCLUDE_PATH="/usr/local/include:${CPLUS_INCLUDE_PATH}"
 export PATH=\
 /sbin:\
@@ -62,7 +64,10 @@ export PATH=\
 /usr/bin:\
 /Developer/usr/bin:\
 /Applications/Inkscape.app/Contents/Resources/bin:\
-${HOME}/bin
+${HOME}/bin:\
+${HOME}/go/bin:\
+${HOME}/moddable/build/bin/mac/release:\
+${HOME}/moddable/build/bin/mac/debug
 
 # git bash completion
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
@@ -120,3 +125,4 @@ z() {
 
 # added by travis gem
 [ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
